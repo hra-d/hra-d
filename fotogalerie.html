@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotogalerie – Hra-D</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .gallery img:hover { transform: scale(1.03); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">HRA-D</a>
+    <nav>
+      <a href="index.html">Úvod</a>
+      <a href="pravidla.html">Pravidla</a>
+      <a href="mista.html">Místa</a>
+      <a href="organizatori.html">Organizátoři</a>
+      <a href="videa.html">Videa</a>
+      <a href="fotogalerie.html" class="active">Fotogalerie</a>
+      <a href="informace.html">Informace</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>Fotogalerie</h1>
+</div>
+
+<main>
+  <section>
+    <p>Fotky ze hry a zapojených míst.</p>
+    <p style="color:var(--grey); font-style:italic;">Jak přidat fotky: uložte obrázky do složky <code>foto/</code> vedle tohoto souboru a přidejte je do galerie níže (viz komentář v kódu).</p>
+
+    <div class="gallery">
+      <!-- PŘÍKLAD: Přidejte fotky takto:
+      <img src="foto/foto1.jpg" alt="Popis fotky">
+      <img src="foto/foto2.jpg" alt="Popis fotky">
+      -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Hra-D · <a href="kontakt.html">Kontakt</a></p>
+</footer>
+
+</body>
+</html>
