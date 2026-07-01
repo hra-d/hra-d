@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Náhled ilustrací – Hra-D</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #FAFBFC; color: #1A2E4A; padding: 2rem; }
+    h1 { color: #2874BC; margin-bottom: 0.3rem; }
+    p { color: #7A8EA8; margin-bottom: 2rem; }
+    .grid { display: flex; flex-wrap: wrap; gap: 2rem; }
+    .card {
+      background: white; border-radius: 16px; padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(40,116,188,0.10);
+      border: 1px solid #DDE8F5; text-align: center;
+    }
+    .card h3 { margin: 0.8rem 0 0.2rem; color: #1A2E4A; font-size: 0.95rem; }
+    .card span { font-size: 0.78rem; color: #7A8EA8; }
+    img { display: block; margin: 0 auto; }
+    .char { width: 140px; }
+    .duo  { width: 280px; }
+    .bldg { width: 260px; }
+  </style>
+</head>
+<body>
+  <h1>🎨 Ilustrace Hra-D</h1>
+  <p>Náhled všech SVG ilustrací. Klikni na obrázek pro plnou velikost.</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <a href="chlapec.svg" target="_blank">
+        <img src="chlapec.svg" class="char" alt="Chlapeček">
+      </a>
+      <h3>Chlapeček</h3>
+      <span>chlapec.svg</span>
+    </div>
+
+    <div class="card">
+      <a href="holcicka.svg" target="_blank">
+        <img src="holcicka.svg" class="char" alt="Holčička">
+      </a>
+      <h3>Holčička</h3>
+      <span>holcicka.svg</span>
+    </div>
+
+    <div class="card">
+      <a href="deti-s-mapou.svg" target="_blank">
+        <img src="deti-s-mapou.svg" class="duo" alt="Děti s mapou">
+      </a>
+      <h3>Děti s mapou</h3>
+      <span>deti-s-mapou.svg</span>
+    </div>
+
+    <div class="card">
+      <a href="hrad.svg" target="_blank">
+        <img src="hrad.svg" class="bldg" alt="Hrad">
+      </a>
+      <h3>Hrad</h3>
+      <span>hrad.svg</span>
+    </div>
+
+    <div class="card">
+      <a href="zamek.svg" target="_blank">
+        <img src="zamek.svg" class="bldg" alt="Zámek">
+      </a>
+      <h3>Zámek</h3>
+      <span>zamek.svg</span>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280">
+  <!-- shadow -->
+  <ellipse cx="100" cy="276" rx="40" ry="5" fill="rgba(0,0,0,0.10)"/>
+
+  <!-- HAIR back -->
+  <ellipse cx="100" cy="54" rx="44" ry="40" fill="#7B4A20"/>
+  <ellipse cx="58" cy="72" rx="11" ry="15" fill="#7B4A20"/>
+  <ellipse cx="142" cy="72" rx="11" ry="15" fill="#7B4A20"/>
+
+  <!-- HEAD -->
+  <circle cx="100" cy="68" r="40" fill="#FDBF96"/>
+
+  <!-- EARS -->
+  <ellipse cx="60" cy="72" rx="9" ry="11" fill="#FDBF96"/>
+  <ellipse cx="140" cy="72" rx="9" ry="11" fill="#FDBF96"/>
+  <ellipse cx="60" cy="73" rx="5" ry="7" fill="#F0A880"/>
+  <ellipse cx="140" cy="73" rx="5" ry="7" fill="#F0A880"/>
+
+  <!-- EYEBROWS -->
+  <path d="M80,52 Q87,47 94,52" stroke="#6B3D1E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M106,52 Q113,47 120,52" stroke="#6B3D1E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- EYES -->
+  <circle cx="87" cy="65" r="9.5" fill="white"/>
+  <circle cx="113" cy="65" r="9.5" fill="white"/>
+  <circle cx="87" cy="65" r="6.5" fill="#4A8BC4"/>
+  <circle cx="113" cy="65" r="6.5" fill="#4A8BC4"/>
+  <circle cx="87" cy="65" r="3.5" fill="#1A1A2E"/>
+  <circle cx="113" cy="65" r="3.5" fill="#1A1A2E"/>
+  <circle cx="89.5" cy="62.5" r="2" fill="white"/>
+  <circle cx="115.5" cy="62.5" r="2" fill="white"/>
+
+  <!-- NOSE -->
+  <circle cx="96" cy="79" r="3" fill="#E89060"/>
+  <circle cx="104" cy="79" r="3" fill="#E89060"/>
+
+  <!-- SMILE -->
+  <path d="M84,89 Q100,102 116,89" stroke="#C86844" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- CHEEKS -->
+  <circle cx="70" cy="80" r="13" fill="#F07050" opacity="0.22"/>
+  <circle cx="130" cy="80" r="13" fill="#F07050" opacity="0.22"/>
+
+  <!-- NECK -->
+  <rect x="90" y="106" width="20" height="18" rx="5" fill="#FDBF96"/>
+
+  <!-- SHIRT -->
+  <path d="M56,130 L68,108 L90,108 L100,124 L110,108 L132,108 L144,130 L144,194 Q144,202 134,202 L66,202 Q56,202 56,194 Z" fill="#2874BC"/>
+  <path d="M90,108 L100,128 L110,108" fill="#1A5490"/>
+
+  <!-- LEFT ARM -->
+  <path d="M58,130 Q40,152 36,170" stroke="#2874BC" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <circle cx="35" cy="176" r="13" fill="#FDBF96"/>
+
+  <!-- RIGHT ARM -->
+  <path d="M142,130 Q160,152 164,170" stroke="#2874BC" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <circle cx="165" cy="176" r="13" fill="#FDBF96"/>
+
+  <!-- PANTS -->
+  <rect x="60" y="196" width="80" height="58" rx="10" fill="#1A2E4A"/>
+  <rect x="96" y="202" width="8" height="52" rx="4" fill="#142038"/>
+
+  <!-- SHOES -->
+  <ellipse cx="78" cy="258" rx="22" ry="11" fill="#2A2A3A"/>
+  <ellipse cx="122" cy="258" rx="22" ry="11" fill="#2A2A3A"/>
+  <ellipse cx="73" cy="254" rx="10" ry="5" fill="#3A3A4A" opacity="0.5"/>
+  <ellipse cx="117" cy="254" rx="10" ry="5" fill="#3A3A4A" opacity="0.5"/>
+</svg>
