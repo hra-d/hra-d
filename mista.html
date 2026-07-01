@@ -6,6 +6,12 @@
   <title>Zapojená místa – Hra-D</title>
   <meta name="description" content="Seznam zapojených míst do hry Hra-D — hrady, zámky a další zajímavá místa.">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    #mapa { height: 480px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); margin-top: 1rem; }
+    .leaflet-popup-content-wrapper { border-radius: 14px; font-family: 'Nunito', sans-serif; }
+    .leaflet-popup-content strong { color: #1A5490; }
+  </style>
 </head>
 <body>
 
@@ -30,7 +36,15 @@
 
 <main>
   <section>
-    <p style="margin-bottom:1.5rem;">Níže jsou všechna místa zapojená do hry Hra-D. Kliknutím na odkaz navštívíte web daného místa.</p>
+    <div class="info-box" style="border-color: var(--green); background: #F0FFF6;">
+      <h3>🟢 Již ve hře 2026 — červenec</h3>
+      <p>Tato místa jsou již zapojená a můžete tam začít hrát: <strong>Hrad Landštejn, Zámek Třeboň, Zámek Žirovnice, Hrad Orlík u Humpolce, Klášter Želiv, Hrad Lichnice, Hrad Šelmberk, Park Fantazium v Roseči, Vítkův Hrádek, Muzeum techniky a řemesel Koloveč, Hrad Rýzmburk u Kdyně, Cvokařské muzeum Rožmitál pod Třemšínem, Hrad Radyně, Hrad Týnec nad Sázavou, Michalův statek Pohleď, Hrad Bezděz, Muzeum strašidel Plzeň, Špýchar Nespery.</strong> Další místa přibývají průběžně!</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Všechna místa 2026</h2>
+    <p style="margin-bottom:1.5rem; color: var(--grey);">Do konce července bude zapojeno 100 míst. Kliknutím na odkaz navštívíte web daného místa.</p>
 
     <div class="locations-grid">
       <div class="location-item"><span class="location-num">1.</span><span class="location-name">Hrad Landštejn</span><a href="http://hrad-landstejn.cz/" target="_blank">web →</a></div>
