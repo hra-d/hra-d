@@ -38,8 +38,9 @@
   <section>
     <div class="info-box" style="border-color: var(--green); background: #F0FFF6;">
       <h3>🟢 Již ve hře 2026 — červenec</h3>
-      <p>Tato místa jsou již zapojená a můžete tam začít hrát: <strong>Hrad Landštejn, Zámek Třeboň, Zámek Žirovnice, Hrad Orlík u Humpolce, Klášter Želiv, Hrad Lichnice, Hrad Šelmberk, Park Fantazium v Roseči, Vítkův Hrádek, Muzeum techniky a řemesel Koloveč, Hrad Rýzmburk u Kdyně, Cvokařské muzeum Rožmitál pod Třemšínem, Hrad Radyně, Hrad Týnec nad Sázavou, Michalův statek Pohleď, Hrad Bezděz, Muzeum strašidel Plzeň, Špýchar Nespery.</strong> Další místa přibývají průběžně!</p>
+      <p>18 míst je již zapojených. Klikněte na špendlík na mapě pro více informací. Další místa přibývají průběžně až do konce července!</p>
     </div>
+    <div id="mapa"></div>
   </section>
 
   <section>
@@ -165,5 +166,54 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // =====================================================
+  // MAPA MÍST — přidejte nová místa sem do pole níže
+  // Formát: { nazev, lat, lng, web }
+  // lat/lng = souřadnice (najdete na maps.google.com → pravý klik → Kopírovat souřadnice)
+  // =====================================================
+  var mista = [
+    { nazev: "Hrad Landštejn",                    lat: 48.9012, lng: 15.4580, web: "http://hrad-landstejn.cz/" },
+    { nazev: "Zámek Třeboň",                       lat: 49.0044, lng: 14.7717, web: "https://www.zamek-trebon.cz/" },
+    { nazev: "Zámek Žirovnice",                    lat: 49.2528, lng: 15.1761, web: "https://www.zirovnice.cz/" },
+    { nazev: "Hrad Orlík u Humpolce",              lat: 49.5300, lng: 15.3750, web: "https://www.castrum.cz/" },
+    { nazev: "Klášter Želiv",                      lat: 49.4722, lng: 15.2344, web: "https://www.zeliv.eu/" },
+    { nazev: "Hrad Lichnice",                      lat: 49.8122, lng: 15.7450, web: "https://www.tremosnice.cz/" },
+    { nazev: "Hrad Šelmberk",                      lat: 49.5180, lng: 14.8160, web: "http://www.centrumselmberk.cz/" },
+    { nazev: "Park Fantazium Roseč",               lat: 49.0528, lng: 14.8278, web: "https://svetfantaziezu.cz/" },
+    { nazev: "Vítkův Hrádek",                      lat: 48.6683, lng: 14.2211, web: "https://www.vitkuvhradek.eu/" },
+    { nazev: "Muzeum techniky a řemesel Koloveč",  lat: 49.4822, lng: 13.0544, web: "http://www.muzeum-kolovec.cz/" },
+    { nazev: "Hrad Rýzmberk u Kdyně",              lat: 49.3914, lng: 13.0206, web: "https://www.kdyne.cz/" },
+    { nazev: "Cvokařské muzeum Rožmitál pod Třemšínem", lat: 49.5928, lng: 13.8839, web: "https://www.staryrozmital.cz/cvokarske-muzeum/" },
+    { nazev: "Hrad Radyně",                        lat: 49.7028, lng: 13.4644, web: "https://www.hrad-radyne.cz/" },
+    { nazev: "Hrad Týnec nad Sázavou",             lat: 49.8319, lng: 14.5928, web: "https://www.hradtynec.cz/" },
+    { nazev: "Michalův statek Pohleď",             lat: 49.6544, lng: 15.5839, web: "http://www.michaluvstatek.cz/" },
+    { nazev: "Hrad Bezděz",                        lat: 50.5244, lng: 14.7128, web: "https://hrad-bezdez.cz/" },
+    { nazev: "Muzeum strašidel Plzeň",             lat: 49.7456, lng: 13.3775, web: "https://www.muzeumstrasidel.cz/" },
+    { nazev: "Špýchar Nespery",                    lat: 49.6519, lng: 14.6539, web: "https://www.blanik.net/spychar-nespery" },
+  ];
+
+  var map = L.map('mapa').setView([49.6, 14.5], 7);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    maxZoom: 18
+  }).addTo(map);
+
+  var icon = L.divIcon({
+    className: '',
+    html: '<div style="background:#2874BC;width:32px;height:32px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.3)"></div>',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -34]
+  });
+
+  mista.forEach(function(m) {
+    L.marker([m.lat, m.lng], {icon: icon})
+      .addTo(map)
+      .bindPopup('<strong>' + m.nazev + '</strong><br><a href="' + m.web + '" target="_blank" style="color:#2874BC;">Navštívit web →</a>');
+  });
+</script>
 </body>
 </html>
